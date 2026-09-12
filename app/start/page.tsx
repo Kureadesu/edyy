@@ -91,7 +91,7 @@ export default function Home() {
   const activeStep = step === 'done' ? 4 : ['feeling', 'dateIdea', 'calendar', 'confirmation'].indexOf(step);
 
   const chooseIdea = (value: DateIdea) => {
-    if (value === 'custom') {
+    if (value === 'Custom') {
       setIsCustomOpen(true);
       return;
     }
@@ -111,7 +111,7 @@ export default function Home() {
 
   const chooseCustomIdea = () => {
     if (!customIdea.trim()) return;
-    setPendingDateIdea('custom');
+    setPendingDateIdea('Custom');
     setDateLocation('');
     setIsCustomOpen(false);
     setIsLocationOpen(true);
@@ -258,7 +258,7 @@ export default function Home() {
             <button className="back-button" onClick={() => setStep('calendar')}>← Back</button>
             <p className="step-kicker">One last look</p>
             <h2>Does this feel like you?</h2>
-            <div className="summary-list"><div><span>Feeling</span><strong>{feelings.find((item) => item.value === feeling)?.label}</strong></div><div><span>The plan</span><strong>{dateIdea === 'custom' ? customIdea : dateIdeas.find((item) => item.value === dateIdea)?.label}</strong></div><div><span>Where</span><strong>{dateLocation || 'Not specified'}</strong></div><div><span>When</span><strong>{formatDate(date)} · {time}</strong></div></div>
+            <div className="summary-list"><div><span>Feeling</span><strong>{feelings.find((item) => item.value === feeling)?.label}</strong></div><div><span>The plan</span><strong>{dateIdea === 'Custom' ? customIdea : dateIdeas.find((item) => item.value === dateIdea)?.label}</strong></div><div><span>Where</span><strong>{dateLocation || 'Not specified'}</strong></div><div><span>When</span><strong>{formatDate(date)} · {time}</strong></div></div>
             <button className="primary-button" onClick={() => setIsEmailOpen(true)}>All set!<FontAwesomeIcon icon={fas.faPaperPlane}/></button>
           </>}
         </section>
