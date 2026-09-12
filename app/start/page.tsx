@@ -79,10 +79,21 @@ export default function Home() {
   }, []);
 
   const currentDate = today ?? new Date(2026, 8, 8);
-  const visibleMonth = calendarMonth ?? new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+  const firstAvailableMonth = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth() + 1,
+    1
+  );
+
+const visibleMonth = calendarMonth ?? firstAvailableMonth;
   const { daysInMonth, firstDay } = getMonthDays(visibleMonth);
   const monthName = visibleMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-  const firstMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+  
+const firstMonth = new Date(
+  currentDate.getFullYear(),
+  currentDate.getMonth() + 1,
+  1
+);
   const lastMonth = new Date(currentDate.getFullYear() + 1, currentDate.getMonth(), 1);
   const canGoPrevious = visibleMonth > firstMonth;
   const canGoNext = visibleMonth < lastMonth;
