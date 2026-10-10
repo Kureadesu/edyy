@@ -160,7 +160,7 @@ const firstMonth = new Date(
   if (!hasStarted) {
     return (
       <main className={`welcome-screen welcome-phase-${introPhase}`} aria-live="polite">
-        {introPhase === 'hello' && <div className="greeting-frame"><h1>Hello, Dorothy<span>!</span></h1></div>}
+        {introPhase === 'hello' && <div className="greeting-frame"><h1>Hello, Edyy <span>❤</span></h1></div>}
         {introPhase === 'korean' && <div className="greeting-frame"><h1>안녕<span>!</span></h1></div>}
         {introPhase === 'intro' && <div className="welcome-intro intro-frame">
           <p className="eyebrow">A small plan for a good day</p>
@@ -198,7 +198,7 @@ const firstMonth = new Date(
 
       <div className="planner-layout">
         <aside className={`intro-panel intro-phase-${introPhase}`} aria-live="polite">
-          {introPhase === 'hello' && <div className="greeting-frame"><h1>Hello, Dorothy<span>!</span></h1></div>}
+          {introPhase === 'hello' && <div className="greeting-frame"><h1>Hello, Edyy<span>!</span></h1></div>}
           {introPhase === 'korean' && <div className="greeting-frame"><h1>안녕<span>!</span></h1></div>}
           {introPhase === 'intro' && <div className="intro-frame">
             <p className="eyebrow">A small plan for a good day</p>

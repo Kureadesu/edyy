@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ClientLayout from './ClientLayout';
 
 export const metadata: Metadata = {
-  title: 'Hello, Dorothy',
-  description: 'Plan a thoughtful date in a few easy steps.',
+  title: 'Hello, Edyy',
+  description: 'Ultimate date planner',
 };
 
 export default function StartLayout({
